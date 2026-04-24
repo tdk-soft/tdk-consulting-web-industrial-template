@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "eslint src --ext .ts,.tsx",
     "test:unit": "vitest run",
     "gen": "chmod +x scripts/generate.sh && ./scripts/generate.sh"
   },
