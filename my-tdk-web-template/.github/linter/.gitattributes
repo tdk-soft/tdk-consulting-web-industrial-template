@@ -1,0 +1,6 @@
+# Force Unix line endings for all text files
+* text eol=lf
+
+# Explicitly mark files that should always have LF
+*.sh text eol=lf
+Dockerfile* text eol=lf

@@ -1,0 +1,6 @@
+# .prettierignore
+node_modules
+.next
+public
+package-lock.json
+*.min.js
