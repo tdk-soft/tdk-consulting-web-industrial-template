@@ -11,14 +11,22 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Setup Node
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: 'npm'
-      - run: npm ci
-      - run: npm run lint
-      - run: npm run test:unit
+          cache: 'npm' # Uses GitHub cache to speed up installation
+
+      - name: Install Dependencies
+        # npm ci is faster and stricter than npm install for CI
+        run: npm ci 
+
+      - name: Lint Check
+        # Uses the script defined in your package.json
+        run: npm run lint 
+
+      - name: Unit Tests
+        run: npm run test:unit
 
   build-and-push:
     needs: quality
