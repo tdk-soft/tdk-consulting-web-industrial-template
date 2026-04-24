@@ -1,0 +1,23 @@
+name: Release Foundation
+on:
+  push:
+    tags:
+    - 'v*-foundation'
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Create Release
+      uses: softprops/action-gh-release@v1
+      with:
+        body: |
+          ## 🏗️ Foundation Release
+
+          **This is a stable base. Do not modify without SRE approval.**
+
+          ### Changes in this foundation:
+          - Docker multi-stage build
+          - Kustomize overlays
+          - CI pipeline
