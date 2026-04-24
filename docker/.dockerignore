@@ -29,3 +29,12 @@ README.md
 CONTRIBUTING.md
 tests/
 docker/
+
+scripts
+.git
+.gitignore
+.github
+
+*.test.tsx
+*.stories.tsx
+vitest.config.ts
