@@ -1,12 +1,12 @@
 {
-  "name": "tdk-nextjs-industrial-template",
+  "name": "basic-webdev-template",
   "version": "1.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint src --ext .ts,.tsx",
+    "lint": "eslint \"src/**/*.{ts,tsx}\"",
     "test:unit": "vitest run",
     "gen": "chmod +x scripts/generate.sh && ./scripts/generate.sh"
   },
